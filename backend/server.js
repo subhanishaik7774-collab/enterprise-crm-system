@@ -19,6 +19,7 @@ const allowedOrigins = [
   'http://localhost:3000',
   'http://localhost:5173',
   /^https:\/\/enterprise-crm-frontend[-\w]*\.onrender\.com$/,
+  /^https:\/\/enterprise-crm-backend[-\w]*\.onrender\.com$/,
 ].filter(Boolean);
 
 app.use(cors({
