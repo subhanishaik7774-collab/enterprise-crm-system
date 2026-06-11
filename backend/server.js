@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const path = require('path');
 const dotenv = require('dotenv');
 const connectDB = require('./src/utils/db');
 const authRoutes = require('./src/routes/auth');
@@ -36,6 +37,17 @@ app.use('/api/leads', leadRoutes);
 app.use('/api/customers', customerRoutes);
 app.use('/api/analytics', analyticsRoutes);
 app.use('/api/activities', activityRoutes);
+
+app.use('/api', (req, res) => {
+  res.status(404).json({ error: 'Route not found' });
+});
+
+const distPath = path.join(__dirname, '../frontend/dist');
+app.use(express.static(distPath));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(distPath, 'index.html'));
+});
 
 app.use(errorHandler);
 

@@ -12,7 +12,7 @@ export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await login({ username: form.email, password: form.password });
+      const response = await login(form);
       localStorage.setItem('crm_token', response.data.token);
       navigate('/');
     } catch (err) {
