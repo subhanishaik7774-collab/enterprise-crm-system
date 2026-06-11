@@ -17,11 +17,8 @@ services:
       - key: CLIENT_URL
         value: https://enterprise-crm-frontend.onrender.com
 
-  - type: web
+  - type: static
     name: enterprise-crm-frontend
-    env: static
-    region: oregon
-    plan: free
     rootDir: frontend
     buildCommand: npm install && npm run build
     staticPublishPath: ./dist
