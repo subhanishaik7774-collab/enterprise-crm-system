@@ -17,7 +17,7 @@ services:
       - key: CLIENT_URL
         value: https://enterprise-crm-frontend.onrender.com
 
-  - type: static
+  - type: static_site
     name: enterprise-crm-frontend
     rootDir: frontend
     buildCommand: npm install && npm run build
