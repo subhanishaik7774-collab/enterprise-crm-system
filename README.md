@@ -26,6 +26,12 @@ A full-stack enterprise CRM scaffold built with React, Node.js, MongoDB, and RES
    npm run dev:frontend
    ```
 
+## Live Demo
+- **URL:** [https://enterprise-crm-backend-bfqm.onrender.com](https://enterprise-crm-backend-bfqm.onrender.com)
+- **Demo Credentials:**
+  - Email: `admin@example.com`
+  - Password: `admin123`
+
 ## Notes
 - Backend uses JWT-based authentication.
 - Role-based access is enforced on protected routes.
