@@ -15,7 +15,7 @@ services:
       - key: JWT_EXPIRES_IN
         value: 7d
       - key: CLIENT_URL
-        value: https://enterprise-crm-frontend.onrender.com
+        value: https://enterprise-crm-frontend-qhht.onrender.com
 
   - type: web
     name: enterprise-crm-frontend
